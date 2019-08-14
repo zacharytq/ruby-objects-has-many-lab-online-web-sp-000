@@ -20,6 +20,6 @@ class Artist
 
   def self.song_count
     array = Song.all.select {|song| song.artist_name == @name}
-    array.lenght
+    array.length
   end
 end
