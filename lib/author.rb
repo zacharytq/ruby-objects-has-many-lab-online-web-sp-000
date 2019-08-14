@@ -17,4 +17,9 @@ class Author
     post = Post.new(post_title)
     post.author = self
   end
+
+  def self.post_count
+    array = Post.all.select {|post| post.author_name != nil}
+    array.length
+  end
 end
